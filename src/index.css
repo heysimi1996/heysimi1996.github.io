@@ -86,4 +86,22 @@
   background-size: 200% 200%;
   animation: rainbow 5s ease infinite;
 }
+:root {
+  --color-brand-orange: #fb923c;
+  --color-brand-black: #121214;
+}
 
+/* Class để làm nút bấm màu cam */
+.btn-primary {
+  background-color: var(--color-brand-orange);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px var(--color-brand-orange); /* Hiệu ứng phát sáng */
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 25px var(--color-brand-orange);
+}
