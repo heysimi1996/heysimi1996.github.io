@@ -34,8 +34,8 @@ export function InputForm({ onStart }: Props) {
     <div className="w-full max-w-2xl mx-auto px-4 py-12">
       <div className="flex justify-center mb-12">
         <div className="flex gap-4">
-          <div className={`w-3 h-3 rounded-full transition-all duration-500 ${step >= 1 ? 'bg-brand-gold shadow-[0_0_15px_rgba(197,160,89,0.5)]' : 'bg-white/10'}`} />
-          <div className={`w-3 h-3 rounded-full transition-all duration-500 ${step >= 2 ? 'bg-brand-gold shadow-[0_0_15px_rgba(197,160,89,0.5)]' : 'bg-white/10'}`} />
+          <div className={`w-3 h-3 rounded-full transition-all duration-500 ${step >= 1 ? 'bg-brand-orange shadow-[0_0_15px_rgba(251,146,60,0.5)]' : 'bg-white/10'}`} />
+          <div className={`w-3 h-3 rounded-full transition-all duration-500 ${step >= 2 ? 'bg-brand-orange shadow-[0_0_15px_rgba(251,146,60,0.5)]' : 'bg-white/10'}`} />
         </div>
       </div>
 
@@ -52,12 +52,12 @@ export function InputForm({ onStart }: Props) {
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest text-white/40 ml-1">Họ và tên</label>
                 <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-gold/60" />
+                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-orange/60" />
                   <input
                     required
                     type="text"
                     placeholder="NGUYỄN VĂN A"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-gold/50 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-orange/50 transition-colors"
                     value={formData.fullName}
                     onChange={e => setFormData({ ...formData, fullName: e.target.value })}
                   />
@@ -68,11 +68,11 @@ export function InputForm({ onStart }: Props) {
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest text-white/40 ml-1">Ngày sinh</label>
                   <div className="relative">
-                    <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-gold/60" />
+                    <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-orange/60" />
                     <input
                       required
                       type="date"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-gold/50 transition-colors [color-scheme:dark]"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-orange/50 transition-colors [color-scheme:dark]"
                       value={formData.birthDate}
                       onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
                     />
@@ -82,10 +82,10 @@ export function InputForm({ onStart }: Props) {
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest text-white/40 ml-1">Giờ sinh (Không bắt buộc)</label>
                   <div className="relative">
-                    <Clock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-gold/60" />
+                    <Clock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-orange/60" />
                     <input
                       type="time"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-gold/50 transition-colors [color-scheme:dark]"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-orange/50 transition-colors [color-scheme:dark]"
                       value={formData.birthHour}
                       onChange={e => setFormData({ ...formData, birthHour: e.target.value })}
                     />
@@ -105,7 +105,7 @@ export function InputForm({ onStart }: Props) {
                         formData.gender === g 
                           ? g === 'LGBT+' 
                             ? 'lgbt-gradient-border text-white' 
-                            : 'bg-brand-gold/10 border-brand-gold text-brand-gold' 
+                            : 'bg-brand-orange/10 border-brand-orange text-brand-orange' 
                           : 'bg-white/5 border-white/10 text-white/40 hover:bg-white/10'
                       }`}
                     >
@@ -122,7 +122,7 @@ export function InputForm({ onStart }: Props) {
             <button
               type="button"
               onClick={nextStep}
-              className="w-full bg-brand-gold py-5 rounded-2xl text-black font-display font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl gold-glow"
+              className="w-full bg-brand-orange py-5 rounded-2xl text-black font-display font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl gold-glow"
             >
               Tiếp tục <ChevronRight className="w-5 h-5" />
             </button>
@@ -138,7 +138,7 @@ export function InputForm({ onStart }: Props) {
           >
             <div className="glass-panel subtle-glow p-8 space-y-8">
               <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-                <Sparkles className="w-6 h-6 text-brand-gold" />
+                <Sparkles className="w-6 h-6 text-brand-orange" />
                 <div>
                   <h2 className="text-xl font-display font-medium">Nhân tướng học AI</h2>
                   <p className="text-white/40 text-sm">Cung cấp đặc điểm diện mạo để AI phân tích sâu hơn</p>
@@ -149,7 +149,7 @@ export function InputForm({ onStart }: Props) {
                 <div className="space-y-3">
                   <label className="text-xs uppercase tracking-widest text-white/40">Vùng Trán</label>
                   <select 
-                    className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white focus:outline-none focus:border-brand-gold/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white focus:outline-none focus:border-brand-orange/50"
                     value={formData.facialFeatures?.forehead}
                     onChange={e => setFormData({ ...formData, facialFeatures: { ...formData.facialFeatures!, forehead: e.target.value } })}
                   >
