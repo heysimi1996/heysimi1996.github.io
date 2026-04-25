@@ -128,32 +128,26 @@ export function AnalysisResult({ result, onReset }: Props) {
               {activeTab === 'overview' && (
                 <div className="space-y-6">
                   <SectionTitle title="Luận Giải Tổng Quan Vận Mệnh" />
-                  <div className="prose prose-invert max-w-none text-white/70 leading-relaxed whitespace-pre-wrap">
+                  <div className="prose prose-invert max-w-none text-white leading-relaxed whitespace-pre-wrap">
                     {result.aiInterpretation.overview}
                   </div>
-                  <div id="seo-overview-long" className="mt-8 pt-8 border-t border-white/5 opacity-[0.02] text-[10px]">
-                    Khám phá AI Thần Số Học chuyên sâu cho người mang số chủ đạo {result.numerology.lifePath}. 
-                    Phân tích bản đồ Pythagoras kết hợp dữ liệu AI thế hệ mới để tìm ra hướng đi đúng đắn nhất. 
-                    Xem thần số học online chính xác nhất cho người sinh ngày {result.input.birthDate}.
-                    {/* Placeholder for long SEO content */}
-                    {Array(20).fill("Luận giải chuyên sâu về vận mệnh và bài học cuộc đời.").join(" ")}
-                  </div>
+
                 </div>
               )}
 
               {activeTab === 'inner' && (
                 <div className="space-y-6">
                   <SectionTitle title="Năng Lượng Nội Tại & Tử Huyệt" />
-                  <div className="prose prose-invert max-w-none text-white/70 leading-relaxed whitespace-pre-wrap">
+                  <div className="prose prose-invert max-w-none text-white leading-relaxed whitespace-pre-wrap">
                     {result.aiInterpretation.innerEnergy}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
                     <div className="p-4 bg-white/5 rounded-xl border border-white/10">
-                      <h4 className="text-brand-gold text-xs uppercase tracking-widest mb-2 font-display">Tâm hồn khao khát</h4>
+                      <h4 className="text-brand-orange text-xs uppercase tracking-widest mb-2 font-display">Tâm hồn khao khát</h4>
                       <p className="text-2xl font-display font-bold">Số {result.numerology.soulUrge}</p>
                     </div>
                     <div className="p-4 bg-white/5 rounded-xl border border-white/10">
-                      <h4 className="text-brand-gold text-xs uppercase tracking-widest mb-2 font-display">Tính cách ẩn giấu</h4>
+                      <h4 className="text-brand-orange text-xs uppercase tracking-widest mb-2 font-display">Tính cách ẩn giấu</h4>
                       <p className="text-2xl font-display font-bold">Số {result.numerology.innerSelf}</p>
                     </div>
                   </div>
@@ -173,7 +167,7 @@ export function AnalysisResult({ result, onReset }: Props) {
                   </div>
                   
                   <SectionTitle title="Tương Tác Bản Mệnh & Thần Số" />
-                  <div className="prose prose-invert max-w-none text-white/70 leading-relaxed whitespace-pre-wrap">
+                  <div className="prose prose-invert max-w-none text-white leading-relaxed whitespace-pre-wrap">
                     {result.aiInterpretation.elementAnalysis || result.numerology.elementData.description}
                   </div>
 
@@ -213,7 +207,7 @@ export function AnalysisResult({ result, onReset }: Props) {
               {activeTab === 'forecast' && (
                 <div className="space-y-8">
                   <SectionTitle title="Vận Trình Tương Lai" />
-                  <div className="prose prose-invert max-w-none text-white/70 whitespace-pre-wrap">
+                  <div className="prose prose-invert max-w-none text-white leading-relaxed whitespace-pre-wrap whitespace-pre-wrap">
                     {result.aiInterpretation.futureForecast}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
@@ -240,7 +234,7 @@ export function AnalysisResult({ result, onReset }: Props) {
               {activeTab === 'face' && (
                 <div className="space-y-6">
                   <SectionTitle title="Nhân Tướng Học AI" />
-                  <div className="prose prose-invert max-w-none text-white/70 leading-relaxed whitespace-pre-wrap">
+                  <div className="prose prose-invert max-w-none text-white leading-relaxed whitespace-pre-wrap">
                     {result.aiInterpretation.faceAnalysis}
                   </div>
                 </div>
@@ -253,10 +247,10 @@ export function AnalysisResult({ result, onReset }: Props) {
                     <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                       <Compass className="w-20 h-20 text-brand-gold" />
                     </div>
-                    <h3 className="text-sm font-display uppercase tracking-widest text-brand-gold mb-4 flex items-center gap-2">
+                    <h3 className="text-sm font-display uppercase tracking-widest text-brand-orange mb-4 flex items-center gap-2">
                        <SparklesIcon className="w-4 h-4" /> Lời khuyên phong thủy
                     </h3>
-                    <p className="text-white/80 italic leading-relaxed relative z-10">
+                    <p className="text-white italic leading-relaxed relative z-10">
                       "{result.aiInterpretation.fengShui.advice}"
                     </p>
                   </div>
@@ -272,13 +266,13 @@ export function AnalysisResult({ result, onReset }: Props) {
                         ))}
                       </div>
                     </div>
-                    <div className="glass-panel p-6 border-brand-gold/10 bg-brand-gold/[0.02]">
-                      <h4 className="text-brand-gold text-xs uppercase tracking-widest mb-4 font-display flex items-center gap-2">
+                    <div className="glass-panel p-6 border-brand-orange/10 bg-brand-orange/[0.02]">
+                      <h4 className="text-brand-orange text-xs uppercase tracking-widest mb-4 font-display flex items-center gap-2">
                           Con Số Kích Tài
                       </h4>
                       <div className="flex flex-wrap gap-3">
                         {result.aiInterpretation.fengShui.luckyNumbers.map(n => (
-                          <div key={n} className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-gold/20 text-brand-gold font-bold">{n}</div>
+                          <div key={n} className="w-10 h-10 rounded-full flex items-center justify-center bg-brand-orange/20 text-brand-orange font-bold">{n}</div>
                         ))}
                       </div>
                     </div>
@@ -305,15 +299,15 @@ export function AnalysisResult({ result, onReset }: Props) {
                           <h4 className="text-sm font-bold text-white/90 flex items-center gap-2">
                             <ShieldAlert className="w-4 h-4 text-rose-500" /> Vật phẩm Phong thủy
                           </h4>
-                          <p className="text-white/60 text-sm leading-relaxed">
+                          <p className="text-white text-sm leading-relaxed">
                              Sử dụng các vật phẩm có tính cân bằng như Hồ lô, Đá Thạch anh tím hoặc chuỗi hạt 108 hạt để hấp thụ trược khí và tăng cường chính khí cho bản thân.
                           </p>
                        </div>
                        <div className="space-y-4">
-                          <h4 className="text-sm font-bold text-white/90 flex items-center gap-2">
-                            <Sun className="w-4 h-4 text-brand-gold" /> Thiền định & Mantra
+                          <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                            <Sun className="w-4 h-4 text-brand-orange" /> Thiền định & Mantra
                           </h4>
-                          <p className="text-white/60 text-sm leading-relaxed">
+                          <p className="text-white text-sm leading-relaxed">
                              Năng lượng số {result.numerology.lifePath} của bạn cần được tịnh hóa bằng bài tập thiền "Quán tưởng ánh sáng" 15 phút mỗi ngày kèm theo Mantra "Om Mani Padme Hum" để đạt được sự an lạc.
                           </p>
                        </div>
@@ -362,8 +356,8 @@ export function AnalysisResult({ result, onReset }: Props) {
             <div className="glass-panel p-6 space-y-4">
               <h3 className="text-xs font-display font-medium text-white/40 uppercase tracking-widest">Hành động đề xuất</h3>
               <div className="space-y-4">
-                 <div className="p-4 bg-brand-gold/10 border border-brand-gold/20 rounded-xl">
-                   <p className="text-brand-gold text-sm font-medium italic">"Hãy tập thói quen ghi chép lại các ý tưởng vào sáng sớm để kích hoạt năng lượng số {result.numerology.lifePath}."</p>
+                 <div className="p-4 bg-brand-orange/10 border border-brand-orange/20 rounded-xl">
+                   <p className="text-brand-orange text-sm font-medium italic">"Hãy tập thói quen ghi chép lại các ý tưởng vào sáng sớm để kích hoạt năng lượng số {result.numerology.lifePath}."</p>
                  </div>
               </div>
             </div>
@@ -376,7 +370,7 @@ export function AnalysisResult({ result, onReset }: Props) {
 
 function StatCard({ label, value, color }: { label: string, value: number, color: 'gold' | 'blue' | 'rose' | 'emerald' }) {
   const colors = {
-    gold: 'text-brand-gold bg-brand-gold/5 border-brand-gold/20',
+    gold: 'text-brand-orange bg-brand-orange/5 border-brand-orange/20',
     blue: 'text-blue-400 bg-blue-500/5 border-blue-500/20',
     rose: 'text-rose-400 bg-rose-500/5 border-rose-500/20',
     emerald: 'text-emerald-400 bg-emerald-500/5 border-emerald-500/20'
